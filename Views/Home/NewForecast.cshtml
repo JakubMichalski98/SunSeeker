@@ -1,0 +1,19 @@
+﻿@model WeatherModel
+
+@if (Model.country != null)
+{
+    <h1>@Model.country</h1>
+    <h2>@Model.temperature</h2>
+    <h2>@Model.observation_time</h2>
+    <h2>@Model.weather_description</h2>
+    <img src="@Model.weather_icon" />
+
+    <input type="button" value="Save to Database" onclick="location.href='@Url.Action("SaveToDatabase", "Home", @Model)'"/>
+    <a asp-controller="Home" asp-action="Index" asp-route-message="Added to database!">Return to search</a>
+}
+else
+{
+    <h2>Location not found</h2>
+    <a asp-controller="Home" asp-action="Index">Return to search</a>
+}
+

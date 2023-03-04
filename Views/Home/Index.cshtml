@@ -1,0 +1,7 @@
+﻿@model MessageModel
+@using (Html.BeginForm("NewForecast", "Home", FormMethod.Post))
+{
+    <input type="text" name="weatherLocation" />
+    <input type="submit" value="Search" />
+    <em style="color:green;">@Model.Message</em>
+}
