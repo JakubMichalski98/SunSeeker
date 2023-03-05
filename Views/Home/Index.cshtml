@@ -1,7 +1,15 @@
 ﻿@model MessageModel
 @using (Html.BeginForm("NewForecast", "Home", FormMethod.Post))
 {
+    <div>
+        <h1>SunSeeker</h1>
+        <p>Use the search bar below in order to find a location's current weather</p>
+    </div>
+
     <input type="text" name="weatherLocation" />
-    <input type="submit" value="Search" />
-    <em style="color:green;">@Model.Message</em>
+    <input style="margin-left: 6px" type="submit" value="Search" />
+    <div>
+        <em style="color:green;">@Model.Message</em>
+    </div>
+
 }

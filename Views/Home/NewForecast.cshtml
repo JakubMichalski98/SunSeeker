@@ -2,13 +2,20 @@
 
 @if (Model.country != null)
 {
-    <h1>@Model.country</h1>
-    <h2>@Model.observation_time</h2>
-    <h2>@Model.temperature&#8451, @Model.weather_description</h2>
-    <img src="@Model.weather_icon" />
+    <div class="container">
+        <div class="forecast-panel">
+            <h1>@Model.country</h1>
+            <h2>@Model.observation_time</h2>
+            <h2>@Model.temperature&#8451, @Model.weather_description</h2>
+            <img src="@Model.weather_icon" />
+        </div>
+    </div>
 
-    <input type="button" value="Save to Database" onclick="location.href='@Url.Action("SaveToDatabase", "Home", @Model)'"/>
-    <a asp-controller="Home" asp-action="Index" asp-route-message="Added to database!">Return to search</a>
+    <div class="container">
+        <input class="btn" style="margin-right: 10px" type="button" value="Save to Database" onclick="location.href='@Url.Action("SaveToDatabase", "Home", @Model)'" />
+        <a asp-controller="Home" asp-action="Index">Return to search</a>
+    </div>
+    
 }
 else
 {
