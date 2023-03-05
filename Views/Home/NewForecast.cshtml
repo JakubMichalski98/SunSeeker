@@ -11,9 +11,9 @@
         </div>
     </div>
 
-    <div class="container">
-        <input class="btn" style="margin-right: 10px" type="button" value="Save to Database" onclick="location.href='@Url.Action("SaveToDatabase", "Home", @Model)'" />
-        <a asp-controller="Home" asp-action="Index">Return to search</a>
+    <div class="flex-container">
+        <input style= margin-right: 10px" type="button" value="Save to Database" onclick="location.href='@Url.Action("SaveToDatabase", "Home", @Model)'" />
+        <a style="margin-left: 40px" class="return-link" asp-controller="Home" asp-action="Index">Return to search</a>
     </div>
     
 }

@@ -27,8 +27,17 @@ body {
     margin-top: 20px;
 }
 
+.flex-container {
+    display: flex;
+    margin-top: 20px;
+
+}
+
 .forecast-panel {
     border-style: solid;
     padding: 12px;
 }
 
+.return-link {
+    vertical-align: bottom;
+}
